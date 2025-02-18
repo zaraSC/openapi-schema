@@ -1,0 +1,42 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Kapture Bobcat API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://aiplatform.kapturekm.com"
+    }
+  ],
+  "paths": {
+    "/kapture-bobcat-crawling/api/get-type-of-products/{type}": {
+      "get": {
+        "summary": "Get Type of Products",
+        "operationId": "getTypeOfProducts",
+        "parameters": [
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
